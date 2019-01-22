@@ -14,9 +14,9 @@ dotnet publish -o publish
 Invoke-Expression C:\revers1.ps1
 
 
-$ServerBIpAddress = "172.16.7.2"
-$Username = "Administrator"
-$Password = "123456"
+$ServerBIpAddress = read-host "IP-address"
+$Username = read-host "Username"
+$Password = read-host "Password"
 
 $pass = ConvertTo-SecureString -AsPlainText $Password -Force
 $MySecureCreds = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $Username,$pass
